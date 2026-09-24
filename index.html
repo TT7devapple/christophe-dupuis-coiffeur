@@ -4,360 +4,221 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Christophe Dupuis</title>
+<title>Christophe Dupuis Coiffeur</title>
 <meta name="description" content="Christophe Dupuis, salon de coiffure à Vincennes depuis 1998 : coupe personnalisée et conseils, du mardi au samedi.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Pinyon+Script&family=Hanken+Grotesk:wght@400;500;600&display=swap">
 <style>
   :root {
-    --ground: #F2F2F0;
-    --surface: #FFFFFF;
-    --ink: #1F2322;
-    --muted: #5B615F;
-    --line: #D6D8D5;
-    --accent: #1F6F6B;
-    --accent-ink: #FFFFFF;
-    --accent2: #8A6A3D;
-    --ok: #2C6E43;
-    --closed: #A63A2A;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      color-scheme: dark;
-    --ground: #121514;
-    --surface: #1B1F1E;
-    --ink: #ECEEED;
-    --muted: #A5ACA9;
-    --line: #2D3331;
-    --accent: #6CC4BE;
-    --accent-ink: #061615;
-    --accent2: #D2AF7A;
-    --ok: #7CC895;
-    --closed: #EE8A78;
-    }
-  }
-  :root[data-theme="dark"] {
-    color-scheme: dark;
-    --ground: #121514;
-    --surface: #1B1F1E;
-    --ink: #ECEEED;
-    --muted: #A5ACA9;
-    --line: #2D3331;
-    --accent: #6CC4BE;
-    --accent-ink: #061615;
-    --accent2: #D2AF7A;
-    --ok: #7CC895;
-    --closed: #EE8A78;
-  }
-  :root {
-    --display: "Libre Caslon Display", "Caslon", Georgia, serif;
-    --body: "Hanken Grotesk", "Segoe UI", Arial, sans-serif;
-    --r: 3px;
-    --btn-r: 3px;
+    color-scheme: light;
+    --teal: #1E4A4A; --teal-2: #143636; --ivory: #F2EFE8; --brass: #B08D57; --brass-l: #D8C08E; --ink: #1D2424; --muted: #5E6666; --line: #D9D4C8;
+    --disp: "Libre Caslon Display", Caslon, Georgia, serif; --script: "Pinyon Script", "Snell Roundhand", cursive; --sans: "Hanken Grotesk", "Segoe UI", Arial, sans-serif;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
-  body { margin: 0; background: var(--ground); color: var(--ink); font: 400 1rem/1.65 var(--body); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  body { margin: 0; background: var(--ivory); color: var(--ink); font: 400 1.03rem/1.7 var(--sans); overflow-x: hidden; }
   .wrap { max-width: 1120px; margin-inline: auto; padding-inline: 20px; }
   a { color: inherit; }
-  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
-  h1, h2, h3 { font-family: var(--display); font-weight: 400; text-transform: none; letter-spacing: -0.01em; line-height: 1.02; margin: 0; text-wrap: balance; }
-  h1 em, h2 em { font-style: italic; color: var(--accent); }
-  .label { font: 600 .74rem/1.2 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  :focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+  h1, h2, h3 { font-family: var(--disp); font-weight: 400; margin: 0; line-height: 1.05; text-wrap: balance; }
+  .proto { background: var(--teal-2); color: var(--ivory); font: 500 .74rem/1.4 var(--sans); letter-spacing: .06em; text-align: center; padding: 8px 16px; }
 
-  .proto { background: var(--ink); color: var(--ground); font: 500 .74rem/1.4 var(--body); letter-spacing: .06em; text-align: center; padding: 8px 16px; }
+  header { background: var(--teal); color: var(--ivory); }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-block: 16px; }
+  .logo { text-decoration: none; display: flex; align-items: baseline; gap: 10px; }
+  .logo b { font: 400 2rem/1 var(--script); color: var(--brass-l); }
+  .logo span { font: 500 .66rem/1 var(--sans); letter-spacing: .34em; text-transform: uppercase; opacity: .8; }
+  nav { display: flex; gap: 26px; font-size: .92rem; letter-spacing: .06em; }
+  nav a { text-decoration: none; opacity: .8; } nav a:hover { opacity: 1; color: var(--brass-l); }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; font: 600 .9rem/1 var(--sans); letter-spacing: .08em; text-decoration: none; background: var(--brass); color: var(--teal-2); border: 1.5px solid var(--brass); cursor: pointer; }
+  .btn:hover { background: var(--brass-l); border-color: var(--brass-l); }
+  .btn.line { background: transparent; color: var(--teal); border-color: var(--teal); }
+  .btn.line:hover { background: var(--teal); color: var(--ivory); }
+  @media (max-width: 760px) { nav { display: none; } .logo span { display: none; } }
 
-  header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: color-mix(in srgb, var(--ground) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
-  header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
-  .brand { text-decoration: none; font-family: var(--display); font-weight: 400; text-transform: none; font-size: 1.3rem; line-height: 1; display: flex; align-items: center; gap: 10px; }
-  nav.links { display: flex; gap: 24px; }
-  nav.links a { text-decoration: none; font-weight: 500; font-size: .95rem; color: var(--muted); }
-  nav.links a:hover { color: var(--ink); }
-  .btn { display: inline-flex; align-items: center; gap: 8px; border: 2px solid var(--ink); background: var(--ink); color: var(--ground); font: 600 .95rem/1 var(--body); padding: 12px 20px; text-decoration: none; cursor: pointer; border-radius: var(--btn-r); transition: transform .15s ease; }
-  .btn:hover { transform: translateY(-1px); }
-  .btn.ghost { background: transparent; color: var(--ink); }
-  .btn.accent { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
-  @media (max-width: 760px) { nav.links { display: none; } header.top .btn { padding: 10px 14px; font-size: .88rem; } }
-
-  /* Hero */
-  .hero { position: relative; overflow: hidden; padding-block: clamp(44px, 7vw, 96px); }
-  .hero .motif { position: absolute; right: -40px; top: 50%; width: clamp(260px, 38vw, 520px); transform: translateY(-50%); color: var(--accent2); opacity: .16; pointer-events: none; }
-  .hero .motif svg { width: 100%; height: auto; display: block; }
-  .hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
-  .hero h1 { font-size: clamp(2.8rem, 8vw, 6.4rem); }
-  .hero .lede { font-size: clamp(1.05rem, 1.6vw, 1.2rem); max-width: 42ch; margin: 22px 0 28px; }
+  /* Hero : miroir */
+  .hero { background: var(--teal); color: var(--ivory); padding-block: clamp(30px, 5vw, 64px) clamp(60px, 8vw, 110px); position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0; opacity: .07; background: repeating-linear-gradient(90deg, var(--brass-l) 0 1px, transparent 1px 64px); }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(28px, 6vw, 80px); align-items: center; }
+  .since { display: inline-flex; align-items: center; gap: 14px; font: 500 .78rem/1 var(--sans); letter-spacing: .32em; text-transform: uppercase; color: var(--brass-l); }
+  .since::before, .since::after { content: ""; width: 26px; border-top: 1px solid var(--brass-l); }
+  .hero h1 { font-size: clamp(3rem, 7.6vw, 6rem); margin: 24px 0 0; }
+  .hero h1 em { font-family: var(--script); font-style: normal; color: var(--brass-l); font-size: 1.15em; display: block; line-height: 1; margin-top: 6px; }
+  .hero p { color: #CBD9D6; font-size: 1.12rem; max-width: 44ch; margin: 22px 0 28px; }
   .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
-  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 22px 22px 20px; display: grid; gap: 14px; font-size: .95rem; box-shadow: 0 18px 40px -30px rgba(0,0,0,.45); }
-  .card .row { display: flex; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
-  .card .row:last-child { border-bottom: 0; padding-bottom: 0; }
-  .card .row > span:first-child { color: var(--muted); }
-  .card .row > span:last-child { text-align: right; font-variant-numeric: tabular-nums; }
-  .status { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
-  .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
-  .status.open { color: var(--ok); }
-  .status.shut { color: var(--closed); }
-  /* Variante : nom en très grand, carte en dessous */
-  .hero.stacked .wrap { grid-template-columns: 1fr; }
-  .hero.stacked h1 { font-size: clamp(3.2rem, 11vw, 9rem); }
-  .hero.stacked .card { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px 28px; }
-  .hero.stacked .card .row { flex-direction: column; gap: 4px; border-bottom: 0; padding-bottom: 0; }
-  .hero.stacked .card .row > span:last-child { text-align: left; }
-  /* Variante : bandeau plein en couleur d'accent */
-  .hero.band { background: var(--accent); color: var(--accent-ink); }
-  .hero.band .label, .hero.band .lede { color: var(--accent-ink); }
-  .hero.band h1 em { color: var(--accent-ink); opacity: .75; }
-  .hero.band .motif { color: var(--accent-ink); opacity: .12; }
-  .hero.band .btn { border-color: var(--accent-ink); background: var(--accent-ink); color: var(--accent); }
-  .hero.band .btn.ghost { background: transparent; color: var(--accent-ink); }
-  .hero.band .card { color: var(--ink); }
-  @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; } .hero .motif { opacity: .08; } }
+  .ctas .btn.line { color: var(--ivory); border-color: var(--ivory); }
+  .mirror { justify-self: center; width: min(330px, 86%); aspect-ratio: 3 / 4.2; border-radius: 170px 170px 14px 14px; padding: 14px; background: linear-gradient(135deg, var(--brass-l), var(--brass) 40%, #8A6C3F 70%, var(--brass-l)); box-shadow: 0 30px 60px -28px rgba(0,0,0,.7); }
+  .mirror .glass { width: 100%; height: 100%; border-radius: 158px 158px 6px 6px; background: linear-gradient(160deg, #EAF2F1 0%, #B9CFCC 45%, #7FA3A0 100%); position: relative; overflow: hidden; display: grid; place-items: center; }
+  .mirror .glass::after { content: ""; position: absolute; top: -20%; left: -60%; width: 50%; height: 140%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.55), transparent); transform: rotate(20deg); animation: shine 6s ease-in-out infinite; }
+  @keyframes shine { 0%, 60% { left: -60%; } 100% { left: 130%; } }
+  .mirror svg { width: 50%; color: var(--teal); }
+  .mirror .tag { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); width: 86%; text-align: center; background: var(--ivory); color: var(--ink); padding: 8px 10px; font-size: .8rem; line-height: 1.4; border: 1px solid var(--brass); }
+  [data-status] { font-weight: 600; display: inline-flex; align-items: center; gap: 8px; }
+  [data-status]::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+  [data-status].open { color: #2F7A4E; } [data-status].shut { color: #A5443A; }
+  @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; } .mirror { width: min(260px, 70%); } }
 
-  section.block { padding-block: clamp(60px, 8vw, 104px); }
-  .sec-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: end; margin-bottom: 40px; }
-  .sec-head h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); }
-  .sec-head p { margin: 0; color: var(--muted); max-width: 46ch; justify-self: end; }
-  @media (max-width: 760px) { .sec-head { grid-template-columns: 1fr; } .sec-head p { justify-self: start; } }
+  /* Frise */
+  .years { padding-block: clamp(56px, 7vw, 96px); text-align: center; }
+  .years h2 { font-size: clamp(2.2rem, 5vw, 3.6rem); color: var(--teal); }
+  .years h2 em { font-family: var(--script); font-style: normal; color: var(--brass); font-size: 1.2em; }
+  .years p { color: var(--muted); max-width: 52ch; margin: 16px auto 40px; }
+  .frise { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--brass); border-bottom: 1px solid var(--brass); }
+  .frise div { padding: 26px 16px; }
+  .frise div + div { border-left: 1px solid var(--line); }
+  .frise b { display: block; font: 400 clamp(2.4rem, 6vw, 3.8rem)/1 var(--disp); color: var(--teal); }
+  .frise span { color: var(--muted); font-size: .95rem; }
+  @media (max-width: 600px) { .frise { grid-template-columns: 1fr; } .frise div + div { border-left: 0; border-top: 1px solid var(--line); } }
 
-  /* Offre : liste façon carte */
-  .menu { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 56px; }
-  .item { padding-block: 20px; border-bottom: 1px solid var(--line); }
-  .item .line { display: flex; align-items: baseline; gap: 12px; }
-  .item h3 { font-size: 1.45rem; }
-  .item .dots { flex: 1; border-bottom: 2px dotted var(--line); transform: translateY(-5px); min-width: 20px; }
-  .item .for { font: 600 .72rem/1.2 var(--body); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
-  .item p { margin: 6px 0 0; color: var(--muted); max-width: 48ch; }
-  @media (max-width: 760px) { .menu { grid-template-columns: 1fr; } .item .for { white-space: normal; text-align: right; } }
-  /* Offre : grille */
-  .services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 32px; }
-  .services .svc { display: grid; gap: 8px; align-content: start; }
-  .services.grid .svc { border-top: 2px solid var(--ink); padding-top: 18px; }
-  .services.tiles .svc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 22px; }
-  .svc .for { font: 600 .72rem/1.2 var(--body); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
-  .svc h3 { font-size: 1.5rem; }
-  .svc p { margin: 0; color: var(--muted); }
-  @media (max-width: 900px) { .services { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 560px) { .services { grid-template-columns: 1fr; } }
-  .note { margin: 28px 0 0; color: var(--muted); max-width: 70ch; }
-  .note b { color: var(--ink); }
+  /* Le salon */
+  .salon { background: #fff; border-block: 1px solid var(--line); padding-block: clamp(64px, 8vw, 104px); }
+  .salon .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: clamp(32px, 6vw, 72px); align-items: start; }
+  .salon h2 { font-size: clamp(2.2rem, 5vw, 3.4rem); color: var(--teal); }
+  .salon .lead { color: var(--muted); margin-top: 16px; max-width: 40ch; }
+  .cards { display: grid; gap: 16px; }
+  .c { display: grid; grid-template-columns: 56px 1fr; gap: 18px; align-items: start; padding: 22px; border: 1px solid var(--line); background: var(--ivory); position: relative; }
+  .c::before { content: ""; position: absolute; inset: 5px; border: 1px solid rgba(176,141,87,.35); pointer-events: none; }
+  .c svg { width: 44px; height: 44px; color: var(--brass); }
+  .c h3 { font-size: 1.5rem; color: var(--teal); }
+  .c p { margin: 4px 0 0; color: var(--muted); }
+  @media (max-width: 760px) { .salon .wrap { grid-template-columns: 1fr; } }
 
-  /* Bandeau signature */
-  .signature { background: var(--ink); color: var(--ground); }
-  .signature .wrap { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(24px, 5vw, 64px); align-items: center; padding-block: clamp(44px, 6vw, 72px); }
-  .sig-motif { width: clamp(90px, 13vw, 150px); color: var(--accent2); }
-  .sig-motif svg { width: 100%; height: auto; display: block; }
-  .signature h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
-  .signature h2 em { color: var(--accent2); }
-  .signature p { margin: 14px 0 0; max-width: 56ch; font-size: 1.08rem; color: color-mix(in srgb, var(--ground) 80%, var(--ink)); }
-  @media (max-width: 600px) { .signature .wrap { grid-template-columns: 1fr; } }
-
-  /* Avis */
-  .reviews { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: clamp(32px, 6vw, 80px); align-items: start; }
-  .score { font: 400 clamp(4.5rem, 12vw, 8rem)/.85 var(--display); font-variant-numeric: tabular-nums; }
-  .score small { font-size: .35em; color: var(--muted); }
-  .quotes figure { margin: 0; padding-block: 22px; border-bottom: 1px solid var(--line); }
-  .quotes figure:first-child { padding-top: 0; }
-  .quotes blockquote { margin: 0; font: italic 500 clamp(1.25rem, 2.4vw, 1.7rem)/1.35 var(--display); text-transform: none; text-wrap: pretty; }
-  .quotes figcaption { margin-top: 10px; font-size: .82rem; color: var(--muted); letter-spacing: .03em; }
-  @media (max-width: 760px) { .reviews { grid-template-columns: 1fr; } }
-
-  /* Horaires + accès */
-  #venir { border-top: 1px solid var(--line); }
-  .visit { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); }
-  .hours-wrap { overflow-x: auto; }
-  .hours { width: 100%; border-collapse: collapse; font-size: .95rem; font-variant-numeric: tabular-nums; }
-  .hours td { padding: 13px 0; border-bottom: 1px solid var(--line); }
-  .hours td + td { text-align: right; padding-left: 16px; }
-  .hours tr.today td { color: var(--accent); font-weight: 600; }
-  .hours tr.today td:first-child::after { content: " ·\00a0aujourd'hui"; font-size: .75rem; }
-  .hours tr.off td + td { color: var(--muted); }
-  .nohours { background: var(--surface); border: 1px dashed var(--line); border-radius: var(--r); padding: 24px; align-self: start; }
-  .nohours p { margin: 0; color: var(--muted); }
-  .contact { display: grid; gap: 24px; align-content: start; }
-  .contact .big { font: 400 clamp(1.8rem, 3.6vw, 2.5rem)/1.05 var(--display); text-transform: none; }
-  .phone-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
-  .phone { font-weight: 600; font-size: clamp(1.4rem, 3vw, 1.8rem); user-select: all; font-variant-numeric: tabular-nums; }
-  .copy { font: 600 .8rem/1 var(--body); background: transparent; color: var(--ink); border: 1px solid var(--line); padding: 8px 12px; cursor: pointer; border-radius: var(--btn-r); }
-  .copy:hover { border-color: var(--ink); }
-  .perks { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
-  .perks li { font-size: .82rem; font-weight: 500; border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; color: var(--muted); }
-  .transit { margin: 0; color: var(--muted); font-size: .95rem; }
-  @media (max-width: 760px) { .visit { grid-template-columns: 1fr; } }
-
-  footer.site { border-top: 1px solid var(--line); padding-block: 28px 40px; }
-  footer.site .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; color: var(--muted); font-size: .88rem; }
-  footer.site b { color: var(--ink); font-family: var(--display); font-weight: 400; text-transform: none; font-size: 1.1rem; }
-
-  @keyframes rise { from { transform: translateY(12px); } to { transform: none; } }
-  .hero h1, .hero .lede, .hero .ctas, .hero .card { animation: rise .6s cubic-bezier(.2,.7,.2,1) both; }
-  .hero .lede { animation-delay: .06s; } .hero .ctas { animation-delay: .12s; } .hero .card { animation-delay: .18s; }
+  .visit { padding-block: clamp(56px, 7vw, 96px); }
+  .visit .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 72px); }
+  .visit h2 { font-size: clamp(2rem, 4.6vw, 3rem); color: var(--teal); margin-bottom: 20px; }
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  td { padding: 12px 0; border-bottom: 1px solid var(--line); } td + td { text-align: right; }
+  tr.today td { color: var(--brass); font-weight: 600; } tr.off td + td { color: var(--muted); }
+  .addr { font: 400 clamp(1.8rem, 3.6vw, 2.4rem)/1.15 var(--disp); color: var(--teal); }
+  .lbl { font-size: .74rem; letter-spacing: .26em; text-transform: uppercase; color: var(--brass); margin-bottom: 8px; font-weight: 600; }
+  .phone { font: 600 1.7rem/1 var(--sans); user-select: all; }
+  .rowp { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .stack { display: grid; gap: 22px; align-content: start; }
+  @media (max-width: 760px) { .visit .wrap { grid-template-columns: 1fr; } }
+  footer { background: var(--teal-2); color: #A9BDBA; padding-block: 26px 36px; font-size: .88rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
 </style>
 </head>
 <body>
-
 <div class="proto">Maquette — proposition de site pour Christophe Dupuis</div>
-
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="#top">Christophe Dupuis</a>
-    <nav class="links" aria-label="Navigation principale"><a href="#offre">Le salon</a><a href="#venir">Horaires &amp; accès</a></nav>
-    <a class="btn" href="tel:+33143285910">01 43 28 59 10</a>
-  </div>
-</header>
+<header><div class="wrap">
+  <a class="logo" href="#top"><b>Christophe Dupuis</b><span>Coiffeur</span></a>
+  <nav aria-label="Navigation principale"><a href="#salon">Le salon</a><a href="#venir">Horaires</a></nav>
+  <a class="btn" href="tel:+33143285910">01 43 28 59 10</a>
+</div></header>
 
 <main id="top">
-  <section class="hero split">
-    <div class="motif" aria-hidden="true"><svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><circle cx="56" cy="148" r="20"/><circle cx="144" cy="148" r="20"/><path d="M70 134 150 26M130 134 50 26"/><circle cx="100" cy="94" r="4" fill="currentColor"/></svg></div>
+  <section class="hero">
     <div class="wrap">
       <div>
-        <div class="label" style="margin-bottom:18px">Salon de coiffure · Vincennes · depuis 1998</div>
-        <h1>La coupe <em>qui vous ressemble</em></h1>
-        <p class="lede">Depuis 1998 sur l&#x27;avenue de Paris, Christophe Dupuis prend le temps de vous écouter pour une coupe adaptée à vos cheveux et à votre style.</p>
-        <div class="ctas">
-          <a class="btn accent" href="#offre">Découvrir</a>
-          <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Christophe+Dupuis+38+avenue+de+Paris+94300+Vincennes" target="_blank" rel="noopener">Itinéraire</a>
+        <div class="since">Maison fondée en 1998</div>
+        <h1>La coupe qui vous ressemble <em>Christophe Dupuis</em></h1>
+        <p>Depuis 1998 sur l'avenue de Paris, Christophe Dupuis prend le temps de vous écouter pour une coupe adaptée à vos cheveux et à votre style.</p>
+        <div class="ctas"><a class="btn" href="tel:+33143285910">Prendre rendez-vous</a><a class="btn line" href="#salon">Le salon</a></div>
+      </div>
+      <div class="mirror" aria-hidden="false">
+        <div class="glass">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><circle cx="30" cy="74" r="10"/><circle cx="70" cy="74" r="10"/><path d="M37 66 74 16M63 66 26 16"/><circle cx="50" cy="44" r="2" fill="currentColor"/></svg>
+          <div class="tag">En ce moment : <span data-status>—</span></div>
         </div>
       </div>
-      <aside class="card" aria-label="Infos pratiques">
-        <div class="row"><span>En ce moment</span><span class="status" id="status">—</span></div>
-        <div class="row"><span>Adresse</span><span>38 avenue de Paris<br>94300 Vincennes</span></div>
-        <div class="row"><span>Téléphone</span><span>01 43 28 59 10</span></div>
-        <div class="row"><span>Depuis</span><span>1998</span></div>
-      </aside>
     </div>
   </section>
 
-  <section class="block" id="offre">
+  <section class="years">
     <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <div class="label" style="margin-bottom:14px">Le salon</div>
-          <h2>Écoute <em>et savoir-faire</em></h2>
-        </div>
-        <p>Chaque rendez-vous commence par un conseil : on regarde ensemble ce qui vous ira le mieux.</p>
+      <h2>Plus de 25 ans <em>au 38</em></h2>
+      <p>Un salon de quartier fidèle au poste, dans une ambiance conviviale, où l'on prend le temps.</p>
+      <div class="frise">
+        <div><b>1998</b><span>Ouverture du salon</span></div>
+        <div><b>38</b><span>avenue de Paris</span></div>
+        <div><b>5 j</b><span>du mardi au samedi</span></div>
       </div>
-      <div class="services grid">
-<article class="svc"><span class="for">Coupe</span><h3>Coupe personnalisée</h3><p>Une coupe pensée pour votre visage, vos cheveux et votre quotidien.</p></article>
-<article class="svc"><span class="for">Conseil</span><h3>Conseils</h3><p>Des conseils d&#x27;entretien pour garder une coupe nette entre deux passages.</p></article>
-<article class="svc"><span class="for">Finition</span><h3>Coiffage</h3><p>Le finish qui fait la différence.</p></article>
-      </div>
-      
     </div>
   </section>
 
-  <section class="signature">
+  <section class="salon" id="salon">
     <div class="wrap">
-      <div class="sig-motif" aria-hidden="true"><svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><circle cx="56" cy="148" r="20"/><circle cx="144" cy="148" r="20"/><path d="M70 134 150 26M130 134 50 26"/><circle cx="100" cy="94" r="4" fill="currentColor"/></svg></div>
+      <div><h2>Écoute et savoir-faire</h2><p class="lead">Chaque rendez-vous commence par un conseil : on regarde ensemble ce qui vous ira le mieux.</p></div>
+      <div class="cards">
+        <div class="c"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="13" cy="32" r="6"/><circle cx="31" cy="32" r="6"/><path d="M17 27 34 6M27 27 10 6"/></svg><div><h3>Coupe personnalisée</h3><p>Une coupe pensée pour votre visage, vos cheveux et votre quotidien.</p></div></div>
+        <div class="c"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 34c6-10 22-10 28 0"/><circle cx="22" cy="16" r="8"/><path d="M34 10l4-4M36 16h5"/></svg><div><h3>Conseils</h3><p>Des conseils d'entretien pour garder une coupe nette entre deux passages.</p></div></div>
+        <div class="c"><svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 12h32M6 12v6M12 12v6M18 12v6M24 12v6M30 12v6M38 12v6"/><path d="M10 28c8 6 16 6 24 0"/></svg><div><h3>Coiffage</h3><p>Le finish qui fait la différence.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="venir">
+    <div class="wrap">
       <div>
-        <h2>Plus de <em>25 ans</em> avenue de Paris</h2>
-        <p>Un salon de quartier fidèle au poste depuis 1998, dans une ambiance conviviale.</p>
+        <h2>Horaires</h2>
+        <table aria-label="Horaires d'ouverture"><tbody>
+          <tr data-d="1" class="off"><td>Lundi</td><td>Fermé</td></tr>
+          <tr data-d="2"><td>Mardi</td><td>09:30 – 19:00</td></tr>
+          <tr data-d="3"><td>Mercredi</td><td>09:30 – 19:00</td></tr>
+          <tr data-d="4"><td>Jeudi</td><td>09:30 – 19:00</td></tr>
+          <tr data-d="5"><td>Vendredi</td><td>09:30 – 19:00</td></tr>
+          <tr data-d="6"><td>Samedi</td><td>09:30 – 19:00</td></tr>
+          <tr data-d="0" class="off"><td>Dimanche</td><td>Fermé</td></tr>
+        </tbody></table>
       </div>
-    </div>
-  </section>
-
-
-  <section class="block" id="venir">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <div class="label" style="margin-bottom:14px">Horaires &amp; accès</div>
-          <h2>Au <em>38</em></h2>
-        </div>
-        <p>Du mardi au samedi. Fermé le dimanche et le lundi.</p>
-      </div>
-      <div class="visit">
-        <div class="hours-wrap">
-          <table class="hours" aria-label="Horaires d'ouverture">
-            <tbody id="hours">
-<tr data-d="1" class="off"><td>Lundi</td><td>Fermé</td></tr>
-<tr data-d="2"><td>Mardi</td><td>09:30 – 19:00</td></tr>
-<tr data-d="3"><td>Mercredi</td><td>09:30 – 19:00</td></tr>
-<tr data-d="4"><td>Jeudi</td><td>09:30 – 19:00</td></tr>
-<tr data-d="5"><td>Vendredi</td><td>09:30 – 19:00</td></tr>
-<tr data-d="6"><td>Samedi</td><td>09:30 – 19:00</td></tr>
-<tr data-d="0" class="off"><td>Dimanche</td><td>Fermé</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="contact">
-          <div>
-            <div class="label" style="margin-bottom:10px">Adresse</div>
-            <div class="big">38 avenue de Paris<br>94300 Vincennes</div>
-          </div>
-          
-          <div>
-            <div class="label" style="margin-bottom:10px">Téléphone</div>
-            <div class="phone-row">
-              <span class="phone" id="phone">01 43 28 59 10</span>
-              <button class="copy" id="copy" type="button">Copier</button>
-            </div>
-          </div>
-          <ul class="perks" aria-label="Infos pratiques"><li>Carte bancaire</li></ul>
-          <div><a class="btn accent" href="https://www.google.com/maps/search/?api=1&query=Christophe+Dupuis+38+avenue+de+Paris+94300+Vincennes" target="_blank" rel="noopener">Ouvrir dans Google Maps</a></div>
-        </div>
+      <div class="stack">
+        <div><div class="lbl">Adresse</div><div class="addr">38 avenue de Paris<br>94300 Vincennes</div></div>
+        <div><div class="lbl">Téléphone</div><div class="rowp"><span class="phone" id="phone">01 43 28 59 10</span><button class="btn line" type="button" data-copy="phone" style="padding:8px 14px;font-size:.8rem">Copier</button></div></div>
+        <div style="color:var(--muted);font-size:.92rem">Carte bancaire acceptée</div>
+        <div><a class="btn" style="background:var(--teal);border-color:var(--teal);color:var(--ivory)" href="https://www.google.com/maps/search/?api=1&query=Christophe+Dupuis+coiffeur+38+avenue+de+Paris+94300+Vincennes" target="_blank" rel="noopener">Ouvrir dans Google Maps</a></div>
       </div>
     </div>
   </section>
 </main>
-
-<footer class="site">
-  <div class="wrap">
-    <b>Christophe Dupuis</b>
-    <span>38 avenue de Paris, 94300 Vincennes · 01 43 28 59 10</span>
-    
-    <span>Coiffeur depuis 1998</span>
-  </div>
-</footer>
-
+<footer><div class="wrap"><span>Christophe Dupuis · 38 avenue de Paris, 94300 Vincennes</span><span>Coiffeur depuis 1998</span></div></footer>
+<script>window.SLOTS = {2:[[570,1140]],3:[[570,1140]],4:[[570,1140]],5:[[570,1140]],6:[[570,1140]]};</script>
 <script>
-  // Ouvert / fermé, à l'heure de Paris (créneaux en minutes ; une fin > 1440 déborde sur le lendemain)
-  (function () {
-    var slots = {"2": [[570, 1140]], "3": [[570, 1140]], "4": [[570, 1140]], "5": [[570, 1140]], "6": [[570, 1140]]};
-    var s = document.getElementById('status');
-    if (!s) return;
-    var p = {};
-    try {
-      new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Paris', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false })
-        .formatToParts(new Date()).forEach(function (x) { p[x.type] = x.value; });
-    } catch (e) {}
-    var map = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
-    var now = new Date();
-    var d = p.weekday in map ? map[p.weekday] : now.getDay();
-    var m = p.hour ? (+p.hour % 24) * 60 + +p.minute : now.getHours() * 60 + now.getMinutes();
-    function day(n) { return slots[String((n + 7) % 7)] || []; }
-    function hm(v) { if (v === 1440) return 'minuit'; v = v % 1440; var h = Math.floor(v / 60), mm = v % 60; return h + 'h' + (mm ? (mm < 10 ? '0' : '') + mm : ''); }
-    var cur = null;
-    day(d).forEach(function (r) { if (m >= r[0] && m < r[1]) cur = r; });
-    day(d - 1).forEach(function (r) { if (r[1] > 1440 && m + 1440 < r[1]) cur = r; });
-    if (cur) { s.className = 'status open'; s.textContent = 'Ouvert · jusqu\'à ' + hm(cur[1]); }
-    else {
-      var txt = null;
-      day(d).forEach(function (r) { if (!txt && m < r[0]) txt = 'ouvre à ' + hm(r[0]); });
-      if (!txt) {
-        var names = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
-        for (var k = 1; k <= 7; k++) {
-          var nd = (d + k) % 7;
-          if (day(nd).length) { txt = 'ouvre ' + (k === 1 ? 'demain' : names[nd]) + ' à ' + hm(day(nd)[0][0]); break; }
-        }
-      }
-      s.className = 'status shut'; s.textContent = 'Fermé · ' + txt;
+(function () {
+  // Ouvert / fermé à l'heure de Paris. SLOTS = {jour: [[début, fin], ...]} en minutes ; fin > 1440 = après minuit.
+  var slots = window.SLOTS || {};
+  var p = {};
+  try {
+    new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Paris', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false })
+      .formatToParts(new Date()).forEach(function (x) { p[x.type] = x.value; });
+  } catch (e) {}
+  var M = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }, n = new Date();
+  var d = p.weekday in M ? M[p.weekday] : n.getDay();
+  var m = p.hour ? (+p.hour % 24) * 60 + +p.minute : n.getHours() * 60 + n.getMinutes();
+  function day(k) { return slots[(k + 7) % 7] || []; }
+  function hm(v) { if (v === 1440) return 'minuit'; v %= 1440; var h = Math.floor(v / 60), mm = v % 60; return h + 'h' + (mm ? (mm < 10 ? '0' : '') + mm : ''); }
+  var cur = null;
+  day(d).forEach(function (r) { if (m >= r[0] && m < r[1]) cur = r; });
+  day(d - 1).forEach(function (r) { if (r[1] > 1440 && m + 1440 < r[1]) cur = r; });
+  var open = !!cur, txt;
+  if (open) txt = 'Ouvert · jusqu’à ' + hm(cur[1]);
+  else {
+    var t = null;
+    day(d).forEach(function (r) { if (!t && m < r[0]) t = 'ouvre à ' + hm(r[0]); });
+    if (!t) {
+      var N = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+      for (var k = 1; k <= 7; k++) { var nd = (d + k) % 7; if (day(nd).length) { t = 'ouvre ' + (k === 1 ? 'demain' : N[nd]) + ' à ' + hm(day(nd)[0][0]); break; } }
     }
-    var row = document.querySelector('#hours tr[data-d="' + d + '"]');
-    if (row) row.classList.add('today');
-  })();
+    txt = 'Fermé · ' + t;
+  }
+  if (Object.keys(slots).length) {
+    document.querySelectorAll('[data-status]').forEach(function (s) { s.classList.add(open ? 'open' : 'shut'); s.textContent = txt; });
+    document.documentElement.classList.add(open ? 'is-open' : 'is-closed');
+  }
+  document.querySelectorAll('[data-d="' + d + '"]').forEach(function (r) { r.classList.add('today'); });
 
-  document.getElementById('copy').addEventListener('click', function () {
-    var btn = this, el = document.getElementById('phone');
-    function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = 'Copier'; }, 1800); }
-    function fallback() {
-      var r = document.createRange(); r.selectNodeContents(el);
-      var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
-      done('Sélectionné');
-    }
-    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(el.textContent).then(function () { done('Copié'); }, fallback);
-    else fallback();
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var el = document.getElementById(btn.getAttribute('data-copy')), label = btn.textContent;
+      function done(x) { btn.textContent = x; setTimeout(function () { btn.textContent = label; }, 1800); }
+      function fb() { var r = document.createRange(); r.selectNodeContents(el); var S = getSelection(); S.removeAllRanges(); S.addRange(r); done('Sélectionné'); }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(el.textContent.trim()).then(function () { done('Copié'); }, fb);
+      else fb();
+    });
   });
+})();
 </script>
 </body>
 </html>
